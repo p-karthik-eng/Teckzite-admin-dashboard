@@ -1,7 +1,10 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { redirect } from "next/navigation"
 
 export default function Home() {
+  redirect("/admin")
+
   return (
     <main className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center space-y-6">
