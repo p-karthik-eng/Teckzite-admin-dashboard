@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "TechZite Admin Dashboard",
+  title: "TeckZite Admin Dashboard",
   description: "Enterprise Admin Dashboard with Neural Network Theme",
   icons: {
     icon: [
@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+   <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning className={`font-sans antialiased`}>
         {children}
         <Analytics />

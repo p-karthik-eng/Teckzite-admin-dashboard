@@ -6,7 +6,7 @@ export default function Home() {
     <main className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center space-y-6">
         <div className="space-y-2">
-          <h1 className="text-5xl font-bold text-primary">TechZite</h1>
+          <h1 className="text-5xl font-bold text-primary">TeckZite</h1>
           <p className="text-xl text-muted-foreground">Enterprise Admin Dashboard</p>
         </div>
         <Link href="/admin">

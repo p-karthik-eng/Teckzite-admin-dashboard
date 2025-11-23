@@ -7,6 +7,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, BarChart3, Users, Calendar, Award } from "lucide-react"
+import { AdminProvider } from "./context/admin-context"
 
 const navItems = [
   { href: "/admin", label: "Dashboard", icon: BarChart3 },
@@ -16,7 +17,7 @@ const navItems = [
   { href: "/admin/gate-allocation", label: "Gate Allocation", icon: Award },
 ]
 
-export default function AdminLayout({
+function AdminLayoutContent({
   children,
 }: {
   children: React.ReactNode
@@ -44,7 +45,7 @@ export default function AdminLayout({
         {/* Logo */}
         <div className="h-16 flex items-center justify-between px-6 border-b border-border flex-shrink-0">
           <Link href="/admin" className="font-bold text-lg text-primary" onClick={handleNavClick}>
-            TechZite
+            TeckZite
           </Link>
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -106,5 +107,17 @@ export default function AdminLayout({
         </main>
       </div>
     </div>
+  )
+}
+
+export default function AdminLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <AdminProvider>
+      <AdminLayoutContent>{children}</AdminLayoutContent>
+    </AdminProvider>
   )
 }
